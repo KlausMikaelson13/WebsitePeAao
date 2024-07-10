@@ -1,0 +1,132 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content appears above video */
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.instagram-button {
+    background-color: #E1306C;
+}
+
+.instagram-button:hover {
+    background-color: #C13584;
+}
+
+.telegram-button {
+    background-color: #0088cc;
+}
+
+.telegram-button:hover {
+    background-color: #007ab6;
+}
+
+.subscribe-button {
+    background-color: #FF0000;
+}
+
+.subscribe-button:hover {
+    background-color: #CC0000;
+}
+
+.amazon-button {
+    background-color: #FF9900; /* Amazon button color */
+}
+
+.amazon-button:hover {
+    background-color: #FF6600; /* Amazon button hover color */
+}
+
+.headline {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.videos-section {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-embed {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Ensure content appears above video */
+    background-color: transparent; /* Set content background color */
+    padding: 20px;
+}
+
+.about-us {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.countdown {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.visitor-counter {
+    margin-top: 20px;
+    font-size: 16px;
+}
