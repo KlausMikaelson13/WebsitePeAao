@@ -79,14 +79,24 @@
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
     }
-    .video-container {
-        margin-top: 20px;
-        text-align: center;
+    .testimonial-container {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        white-space: nowrap;
     }
-    .video-embed {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
+    .testimonial {
+        flex: 0 0 auto;
+        margin-right: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    .testimonial p {
+        margin: 0;
+        font-size: 16px;
     }
     .content {
         position: relative;
@@ -131,9 +141,23 @@
                 <p>At Websitepeaao, we believe that a stunning website shouldn't break the bank. Our team of skilled designers and developers work passionately to create websites that are both visually appealing and highly functional, all within your budget. Whether you're a small business owner, a startup, or an individual, we have the perfect web solution for you.</p>
             </div>
             <div class="videos-section">
-                <h2>Client's Testimonial</h2>
+                <h2>Client's Testimonials</h2>
                 <div class="testimonial-container">
-                    <p>"WebsitePeAao transformed my online presence! The team was professional, efficient, and exceeded my expectations. Highly recommend their services!" - Satisfied Client</p>
+                    <div class="testimonial">
+                        <p>"WebsitePeAao transformed my online presence! The team was professional, efficient, and exceeded my expectations. Highly recommend their services!" - Satisfied Client</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I am thrilled with the website designed by WebsitePeAao. It's user-friendly and beautifully crafted. Their customer service is top-notch!" - Happy Customer</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The team at WebsitePeAao was amazing to work with. They understood my vision and brought it to life perfectly. I couldn't be happier!" - Grateful Client</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"WebsitePeAao provided an exceptional service. They delivered a stunning website that has significantly boosted my business. Thank you!" - Satisfied Business Owner</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I highly recommend WebsitePeAao for anyone looking to create a professional website. Their creativity and attention to detail are unmatched!" - Delighted User</p>
+                    </div>
                 </div>
             </div>
             <div class="visitor-counter">
