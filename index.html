@@ -17,7 +17,7 @@
     }
     .container {
         position: relative;
-        z-index: 1; /* Ensure content appears above video */
+        z-index: 1;
         margin-top: 50px;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
@@ -25,8 +25,8 @@
         display: inline-block;
     }
     .logo {
-        width: 200px; /* Adjust size as needed */
-        height: auto; /* Maintain aspect ratio */
+        width: 200px;
+        height: auto;
         margin-top: 20px;
     }
     .buttons {
@@ -61,10 +61,10 @@
         background-color: #CC0000;
     }
     .amazon-button {
-        background-color: #FF9900; /* Amazon button color */
+        background-color: #FF9900;
     }
     .amazon-button:hover {
-        background-color: #FF6600; /* Amazon button hover color */
+        background-color: #FF6600;
     }
     .headline {
         margin-top: 20px;
@@ -81,9 +81,10 @@
     }
     .testimonial-container {
         display: flex;
-        overflow-x: auto;
+        overflow: hidden;
         padding: 10px;
         white-space: nowrap;
+        position: relative;
     }
     .testimonial {
         flex: 0 0 auto;
@@ -101,8 +102,8 @@
     }
     .content {
         position: relative;
-        z-index: 2; /* Ensure content appears above video */
-        background-color: transparent; /* Set content background color */
+        z-index: 2;
+        background-color: transparent;
         padding: 20px;
     }
     .about-us {
@@ -143,7 +144,7 @@
             </div>
             <div class="videos-section">
                 <h2>Client's Testimonials</h2>
-                <div class="testimonial-container">
+                <div class="testimonial-container" id="testimonial-container">
                     <div class="testimonial">
                         <p>"WebsitePeAao transformed my online presence! The team was professional, efficient, and exceeded my expectations. Highly recommend their services!" - Satisfied Client</p>
                     </div>
@@ -162,16 +163,36 @@
                 </div>
             </div>
             <div class="visitor-counter">
-                <!-- Hitwebcounter Code START -->
                 <a href="http://www.hitwebcounter.com" target="_blank">
                 <img src="http://hitwebcounter.com/counter/counter.php?page=8376514&style=0006&nbdigits=5&type=ip&initCount=0" title="web counter" Alt="web counter" border="0">
                 </a>
                 <br/>
                 <a href="http://www.hitwebcounter.com" title="HitWebCounter" target="_blank" style="font-family: Arial, sans-serif; font-size: 9px; color: #6A7175; text-decoration: none;">                                   
                 </a>   
-                <!-- Hitwebcounter Code END -->
             </div>
         </div>
     </div>
+    <script>
+        function startScroll() {
+            const container = document.getElementById('testimonial-container');
+            let scrollAmount = 0;
+            const scrollStep = 2; // Change this value to adjust scrolling speed
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            
+            function scrollTestimonials() {
+                if (scrollAmount >= maxScroll) {
+                    scrollAmount = 0; // Reset scroll position to loop
+                    container.scrollLeft = 0;
+                } else {
+                    scrollAmount += scrollStep;
+                    container.scrollLeft += scrollStep;
+                }
+            }
+            
+            setInterval(scrollTestimonials, 30); // Adjust the interval for smoother or faster scrolling
+        }
+
+        window.onload = startScroll;
+    </script>
 </body>
 </html>
