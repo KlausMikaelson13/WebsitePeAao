@@ -122,6 +122,36 @@
         margin-top: 20px;
         font-size: 16px;
     }
+    .website-templates {
+        margin-top: 30px;
+        text-align: left;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
+    .website-templates h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    .templates-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .template {
+        flex: 0 1 calc(25% - 20px);
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .template img {
+        width: 100%;
+        border-radius: 10px;
+    }
 </style>
 </head>
 <body>
@@ -162,37 +192,55 @@
                     </div>
                 </div>
             </div>
+            <div class="website-templates">
+                <h2>Website Templates</h2>
+                <div class="templates-container">
+                    <div class="template">
+                        <img src="websitetemplate1.jpg" alt="Website Template 1">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate2.jpg" alt="Website Template 2">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate3.jpg" alt="Website Template 3">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate4.jpg" alt="Website Template 4">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate5.jpg" alt="Website Template 5">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate6.jpg" alt="Website Template 6">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate7.jpg" alt="Website Template 7">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate8.jpg" alt="Website Template 8">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate9.jpg" alt="Website Template 9">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate10.jpg" alt="Website Template 10">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate11.jpg" alt="Website Template 11">
+                    </div>
+                    <div class="template">
+                        <img src="websitetemplate12.jpg" alt="Website Template 12">
+                    </div>
+                </div>
+            </div>
+            <div class="countdown">
+                Countdown to Our Next Big Launch: <span id="countdown-timer">00:00:00</span>
+            </div>
             <div class="visitor-counter">
-                <a href="http://www.hitwebcounter.com" target="_blank">
-                <img src="http://hitwebcounter.com/counter/counter.php?page=8376514&style=0006&nbdigits=5&type=ip&initCount=0" title="web counter" Alt="web counter" border="0">
-                </a>
-                <br/>
-                <a href="http://www.hitwebcounter.com" title="HitWebCounter" target="_blank" style="font-family: Arial, sans-serif; font-size: 9px; color: #6A7175; text-decoration: none;">                                   
-                </a>   
+                Visitors Count: <span id="visitor-count">1000</span>
             </div>
         </div>
     </div>
-    <script>
-        function startScroll() {
-            const container = document.getElementById('testimonial-container');
-            let scrollAmount = 0;
-            const scrollStep = 2; // Change this value to adjust scrolling speed
-            const maxScroll = container.scrollWidth - container.clientWidth;
-            
-            function scrollTestimonials() {
-                if (scrollAmount >= maxScroll) {
-                    scrollAmount = 0; // Reset scroll position to loop
-                    container.scrollLeft = 0;
-                } else {
-                    scrollAmount += scrollStep;
-                    container.scrollLeft += scrollStep;
-                }
-            }
-            
-            setInterval(scrollTestimonials, 30); // Adjust the interval for smoother or faster scrolling
-        }
-
-        window.onload = startScroll;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
