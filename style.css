@@ -1,27 +1,44 @@
+/* Update existing styles and add new styles for full screen image */
+
+/* Heavitas font */
+@font-face {
+    font-family: 'Heavitas';
+    src: url('heavitas.woff2') format('woff2'),
+         url('heavitas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     text-align: center;
     margin: 0;
     padding: 0;
+    background: url('websitebg.jpeg') no-repeat center center fixed;
+    background-size: cover;
 }
+
 .container {
     position: relative;
-    z-index: 1; /* Ensure content appears above video */
+    z-index: 1;
     margin-top: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: transparent; /* Adjusted to remove white shade */
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
 }
+
 .logo {
-    width: 200px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 300px;
+    height: auto;
     margin-top: 20px;
 }
+
 .buttons {
     margin-top: 20px;
 }
+
 .social-button {
     display: inline-block;
     padding: 10px 20px;
@@ -32,36 +49,38 @@ body {
     transition: background-color 0.3s;
     margin: 0 10px;
 }
+
 .instagram-button {
     background-color: #E1306C;
 }
+
 .instagram-button:hover {
     background-color: #C13584;
 }
+
 .telegram-button {
     background-color: #0088cc;
 }
+
 .telegram-button:hover {
     background-color: #007ab6;
 }
-.subscribe-button {
-    background-color: #FF0000;
+
+.packages-button {
+    background-color: #4CAF50;
 }
-.subscribe-button:hover {
-    background-color: #CC0000;
+
+.packages-button:hover {
+    background-color: #45a049;
 }
-.amazon-button {
-    background-color: #FF9900; /* Amazon button color */
-}
-.amazon-button:hover {
-    background-color: #FF6600; /* Amazon button hover color */
-}
+
 .headline {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
     color: #333;
 }
+
 .videos-section {
     margin-top: 30px;
     text-align: left;
@@ -69,43 +88,79 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
-.video-container {
+
+.content {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.about-us {
     margin-top: 20px;
+    padding: 20px;
+    background-color: transparent; /* Adjusted to remove background */
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Heavitas', sans-serif; /* Apply Heavitas font */
+    color: black; /* Font color */
+}
+
+.website-templates {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    background-color: transparent; /* Adjusted to remove background */
+    border-radius: 10px;
+}
+
+.website-templates h2 {
     text-align: center;
+    font-size: 24px;
 }
-.video-embed {
+
+.templates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.template {
+    flex: 0 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; /* Cursor pointer for clickable effect */
+}
+
+.template img {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    border-radius: 10px;
 }
-video#bg-video {
+
+.full-screen-img {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1000;
-    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
 }
-.content {
-    position: relative;
-    z-index: 2; /* Ensure content appears above video */
-    background-color: transparent; /* Set content background color */
-    padding: 20px;
-}
-.about-us {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+
+.full-screen-img img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
-    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.countdown {
-    margin-top: 20px;
-    font-size: 24px;
-}
-.visitor-counter {
-    margin-top: 20px;
-    font-size: 16px;
 }
