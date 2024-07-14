@@ -82,18 +82,19 @@
     .about-us {
         margin-top: 20px;
         padding: 20px;
-        background-color: transparent; /* Adjusted to remove background */
+        background-color: white; /* White background */
         border-radius: 10px;
         text-align: left;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        font-family: 'Heavitas', sans-serif; /* Apply Heavitas font */
+        font-family: 'Heavitas', sans-serif;
+        font-weight: bold; /* Bold font */
         color: black; /* Font color */
     }
     .website-templates {
         margin-top: 30px;
         text-align: left;
         padding: 20px;
-        background-color: transparent; /* Adjusted to remove background */
+        background-color: white; /* White background */
         border-radius: 10px;
     }
     .website-templates h2 {
@@ -114,7 +115,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        cursor: pointer; /* Cursor pointer for clickable effect */
+        cursor: pointer;
     }
     .template img {
         width: 100%;
@@ -129,6 +130,7 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         z-index: 999;
+        cursor: pointer; /* Cursor pointer for full-screen overlay */
     }
     .full-screen-img img {
         max-width: 90%;
@@ -212,6 +214,13 @@
                 document.getElementById('fullScreenImgSrc').src = event.target.src;
                 document.getElementById('fullScreenImage').style.display = 'block';
             });
+        });
+
+        // Function to close full screen image on click anywhere
+        document.getElementById('fullScreenImage').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeFullScreen();
+            }
         });
 
         // Function to close full screen image
