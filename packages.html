@@ -14,20 +14,32 @@
         padding: 0;
         background: url('websitebackground.jpg') no-repeat center center fixed;
         background-size: cover;
+        overflow-x: hidden;
     }
     .container {
         position: relative;
         z-index: 1;
-        margin-top: 50px;
+        margin: 50px auto;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         border-radius: 10px;
         display: inline-block;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     .logo {
         width: 300px;
         height: auto;
         margin-top: 20px;
+        animation: slideIn 1s ease-in-out;
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-100px); }
+        to { opacity: 1; transform: translateX(0); }
     }
     .packages {
         margin-top: 30px;
@@ -40,13 +52,25 @@
     .packages h2 {
         text-align: center;
         font-size: 24px;
+        margin-bottom: 20px;
+        animation: fadeIn 2s ease-in-out;
     }
     .package {
         margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .package:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
     .package h3 {
         font-size: 20px;
         color: #333;
+        margin-bottom: 10px;
     }
     .package ul {
         list-style-type: none;
